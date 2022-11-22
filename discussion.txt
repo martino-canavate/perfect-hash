@@ -1,0 +1,19 @@
+If the number of keys was too large, my programe
+would actually start to loose plenty of time in calculating
+if the difference in position between different keys is smaller
+ than the lineWindow. As a matter of fact if I did this with
+the basic algorithm (comparing the position difference of every
+element), the time taken would be around Θ(n^2), where n is the
+number of keys.
+
+Thats is why I have implemented MergeSort. This way it's true
+that you will lose Θ(n*log(n))time sorting all the keys current
+positions. But for a large amount of keys it's definitely worth
+it, as you will loose way less time computing if the difference
+in position is smaller than the lineWindow.
+
+I could further optimise my HitStream algorithm if I could stop 
+checking for hits once the minimum required hits where matched
+
+A way faster method would be to arrange the streams in a data tree, this way it the sorting would be way faster, although pop and peek would require more work.
+ 
